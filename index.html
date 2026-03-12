@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Alivio — Tu estómago en calma, naturalmente</title>
+    <meta name="description" content="Accede gratis a recetas seguras para gastritis, un listado inteligente de alimentos y el botón SOS para crisis digestivas. Creado desde la experiencia real.">
+    <meta name="keywords" content="gastritis, reflujo, recetas gastritis, alimentos gastritis, alivio estomacal, protocolo alivio">
+    <meta name="author" content="Protocolo Alivio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Protocolo Alivio — El alivio para tu estómago comienza aquí">
+    <meta property="og:description" content="Recetas seguras, listado inteligente de alimentos y botón SOS. Gratis.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/app-mockup.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Protocolo<strong>Alivio</strong></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Beneficios</a></li>
+                <li><a href="#story">Nuestra Historia</a></li>
+                <li><a href="#premium">Premium</a></li>
+            </ul>
+            <a href="https://proyecto-alivio.lovable.app/" target="_blank" rel="noopener noreferrer" class="nav-cta">Acceso Gratuito</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== SECCIÓN 1: HERO ===================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    100% Gratuito · Sin tarjeta de crédito
+                </div>
+                <h1>El alivio para tu estómago <span class="gradient-text">comienza aquí.</span></h1>
+                <p class="hero-subtitle">
+                    Sin pastillas mágicas, con ciencia y hábitos. Accede gratis a nuestra herramienta de bolsillo: 
+                    conoce qué comer, prepara recetas seguras en Airfryer y usa nuestro 
+                    <strong>Botón SOS</strong> para crisis de gastritis o reflujo.
+                </p>
+
+                <!-- CTA Formulario -->
+                <form class="hero-form" id="leadForm">
+                    <div class="form-wrapper" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="input-group">
+                            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="3"/>
+                                <path d="M2 7l10 7 10-7"/>
+                            </svg>
+                            <input 
+                                type="email" 
+                                id="emailInput"
+                                name="email"
+                                placeholder="Ingresa tu correo electrónico" 
+                                required
+                                autocomplete="email"
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow btn-lg hero-cta-btn" id="submitBtn">
+                            <span class="btn-text">Quiero mi Acceso Gratuito</span>
+                            <svg class="btn-arrow hero-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="form-disclaimer" style="margin-top: 1rem; margin-bottom: 2rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="lock-icon" style="width: 14px; height: 14px; margin-right: 4px;">
+                            <rect x="5" y="11" width="14" height="9" rx="2"/>
+                            <path d="M8 11V7a4 4 0 018 0v4"/>
+                        </svg>
+                        Tus datos están protegidos.
+                    </p>
+                </form>
+
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <div class="avatars">
+                        <div class="avatar" style="background: #a8d5ba;">🙂</div>
+                        <div class="avatar" style="background: #f5d6a8;">😊</div>
+                        <div class="avatar" style="background: #d5a8c4;">😄</div>
+                        <div class="avatar" style="background: #a8c4d5;">🤗</div>
+                    </div>
+                    <p>Más de <strong>2,500+</strong> personas ya usan Protocolo Alivio</p>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-glow"></div>
+                    <img src="assets/app-screenshot.png" alt="Protocolo Alivio App Visualización" loading="eager" class="hero-app-img">
+                </div>
+                <!-- Floating Badges -->
+                <div class="floating-badge badge-sos">
+                    <span class="fb-icon">🆘</span>
+                    <span>Botón SOS<br><small>Alivio inmediato</small></span>
+                </div>
+                <div class="floating-badge badge-food">
+                    <span class="fb-icon">🚦</span>
+                    <span>Semáforo<br><small>100 alimentos</small></span>
+                </div>
+                <div class="floating-badge badge-recipe">
+                    <span class="fb-icon">🍳</span>
+                    <span>Recetas<br><small>Airfryer seguras</small></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Descubre más</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 2: HISTORIA ===================== -->
+    <section class="story" id="story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-image-wrapper">
+                    <div class="story-image-frame">
+                        <img src="assets/mujer_y_mama.png" alt="Mujer y su mamá" loading="lazy">
+                        <div class="image-accent"></div>
+                    </div>
+                    <div class="story-quote">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="quote-icon">
+                            <path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/>
+                        </svg>
+                        <p>La confusión en la cocina tenía que terminar.</p>
+                    </div>
+                </div>
+
+                <div class="story-content">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        Nuestra Historia
+                    </div>
+                    <h2>Creado desde el dolor real, diseñado para el <span class="highlight">alivio diario.</span></h2>
+                    <p class="story-text">
+                        <strong>Protocolo Alivio</strong> no nació en un laboratorio corporativo. 
+                        Nació de la necesidad. Tras años de luchar contra mi propio reflujo silencioso 
+                        —<em>ese que quema la garganta sin avisar</em>— y de ver a mi madre sufrir los 
+                        estragos de una gastritis crónica, decidimos que la confusión en la cocina 
+                        tenía que terminar.
+                    </p>
+                    <p class="story-text">
+                        No somos solo una lista de alimentos; somos la herramienta que nos 
+                        <strong>devolvió la paz</strong>. Y ahora queremos compartirla contigo.
+                    </p>
+                    <div class="story-stats">
+                        <div class="stat">
+                            <span class="stat-number">100</span>
+                            <span class="stat-label">Alimentos clasificados</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100</span>
+                            <span class="stat-label">Recetas seguras</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">SOS disponible</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 3: FEATURES GRATIS ===================== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label center">
+                    <span class="label-line"></span>
+                    Acceso Gratuito
+                    <span class="label-line"></span>
+                </div>
+                <h2>Lo que obtienes <span class="gradient-text">GRATIS</span> hoy</h2>
+                <p class="section-desc">Todo lo que necesitas para empezar a sentir alivio, sin pagar un centavo.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Card: Semáforo -->
+                <div class="feature-card card-semaforo">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="traffic-light">
+                            <div class="light green"></div>
+                            <div class="light yellow"></div>
+                            <div class="light red"></div>
+                        </div>
+                    </div>
+                    <div class="card-badge">Incluido gratis</div>
+                    <h3>Listado Inteligente</h3>
+                    <p>
+                        Descubre exactamente qué alimentos son 
+                        <span class="tag tag-green">seguros</span>, cuáles 
+                        <span class="tag tag-yellow">moderar</span> y cuáles 
+                        <span class="tag tag-red">evitar</span>.
+                    </p>
+                    <ul class="card-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            100 alimentos clasificados
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sistema de semáforo visual
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Actualizado con evidencia clínica
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card: Recetas -->
+                <div class="feature-card card-recetas featured">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="airfryer-icon">
+                            <span>🍳</span>
+                            <div class="steam">
+                                <div class="steam-line"></div>
+                                <div class="steam-line"></div>
+                                <div class="steam-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-badge featured-badge">⭐ Más popular</div>
+                    <h3>Recetas Airfryer</h3>
+                    <p>
+                        Cenas rápidas y deliciosas en Airfryer que <strong>no irritarán</strong> 
+                        tu mucosa gástrica. Estómago sensible, sabor completo.
+                    </p>
+                    <ul class="card-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Recetas en menos de 30 minutos
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Ingredientes fáciles de encontrar
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Aptas para estómagos sensibles
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card: SOS -->
+                <div class="feature-card card-sos">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <div class="sos-button-icon">
+                            <div class="sos-pulse"></div>
+                            <div class="sos-pulse delay"></div>
+                            <span>SOS</span>
+                        </div>
+                    </div>
+                    <div class="card-badge sos-badge">Para crisis</div>
+                    <h3>Botón SOS</h3>
+                    <p>
+                        ¿En medio de una crisis? Presiona el botón para recibir 
+                        <strong>protocolos de alivio rápido</strong> y natural. Acción inmediata.
+                    </p>
+                    <ul class="card-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Protocolos paso a paso
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Remedios naturales validados
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Disponible 24/7 en tu bolsillo
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA secundario -->
+            <div class="features-cta">
+                <a href="https://proyecto-alivio.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow btn-lg">
+                    <span class="btn-text">Quiero mi Acceso Gratuito</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <p class="cta-note">Sin tarjeta de crédito · Acceso inmediato</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 4: PREMIUM ===================== -->
+    <section class="premium" id="premium">
+        <div class="container">
+            <div class="premium-grid">
+                <div class="premium-content">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        El siguiente nivel
+                    </div>
+                    <h2>¿Listo para la transformación <span class="highlight">completa</span>?</h2>
+                    <p class="premium-text">
+                        Tu acceso gratuito es solo el comienzo. Cuando estés listo, desbloquea nuestro 
+                        arsenal completo: <strong>100 recetas exclusivas</strong> adaptables a tu situación 
+                        para mantener tu estómago en calma a largo plazo.
+                    </p>
+                    <ul class="premium-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            100 recetas diseñadas para cuidar tu digestión
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Aptas para reflujo, crisis sensibles o fases controladas
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sin ingredientes que irriten tu mucosa gástrica
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Actualizaciones de por vida
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="premium-card">
+                    <div class="premium-card-inner">
+                        <div class="premium-ribbon">🔥 Oferta de Lanzamiento</div>
+                        <div class="premium-pricing">
+                            <span class="price-old">$19.99</span>
+                            <div class="price-current">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">14</span>
+                                <span class="price-cents">.99</span>
+                            </div>
+                            <span class="price-period">Pago único · Acceso de por vida</span>
+                        </div>
+                        <div class="savings-badge">
+                            <span>Ahorras $5.00</span>
+                        </div>
+                        <a href="https://proyecto-alivio.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn-premium">
+                            <span>Desbloquear Acceso Total</span>
+                        </a>
+                        <p class="premium-guarantee">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            Garantía de satisfacción · 7 días
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 5: FOOTER ===================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo footer-logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">Protocolo<strong>Alivio</strong></span>
+                    </a>
+                    <p class="footer-tagline">Tu estómago en calma, naturalmente.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Acceso</h4>
+                        <ul>
+                            <li><a href="#features">Beneficios Gratis</a></li>
+                            <li><a href="#premium">Versión Premium</a></li>
+                            <li><a href="#hero">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Términos y Condiciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Pinterest">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Threads">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.963-.065-1.19.408-2.285 1.33-3.082.88-.762 2.063-1.198 3.42-1.26 1.1-.05 2.126.07 3.057.36.026-.58.01-1.124-.055-1.624-.29-2.22-1.664-3.35-4.084-3.36H12c-1.39.01-2.505.442-3.317 1.282-.85.878-1.315 2.145-1.382 3.769l-2.117-.03c.085-2.14.756-3.88 1.993-5.168C8.33 3.497 9.9 2.838 11.89 2.822h.27c3.244.028 5.306 1.616 5.694 4.378.082.581.115 1.217.098 1.905.927.483 1.703 1.146 2.27 1.975.826 1.207 1.127 2.674.87 4.241-.37 2.257-1.476 3.975-3.288 5.108C16.2 21.4 14.382 21.98 12.186 24zm-.09-8.35c-.2.01-.39.022-.57.044-.93.113-1.645.44-2.065.944-.39.47-.564 1.06-.524 1.756.044.834.445 1.5 1.196 1.985.617.399 1.42.58 2.254.538 1.1-.06 1.94-.453 2.496-1.143.465-.577.777-1.39.902-2.352-.86-.393-1.87-.6-2.978-.6-.235 0-.474.01-.712.028z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="medical-disclaimer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    <p>
+                        <strong>Aviso médico:</strong> Esta app es una herramienta de gestión alimentaria. 
+                        No sustituye el consejo de tu médico especialista. Consulta siempre a un profesional 
+                        de la salud para diagnóstico y tratamiento.
+                    </p>
+                </div>
+                <p class="copyright">&copy; 2025 Protocolo Alivio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
