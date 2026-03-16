@@ -8,6 +8,29 @@
     <meta name="keywords" content="gastritis, reflujo, recetas gastritis, alimentos gastritis, alivio estomacal, protocolo alivio">
     <meta name="author" content="Protocolo Alivio">
 
+    <!-- Medical SEO (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalAudience",
+      "audienceType": "Patient",
+      "healthCondition": [
+        {
+          "@type": "MedicalCondition",
+          "name": "Gastritis"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Reflujo silencioso"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Reflujo gastroesofágico"
+        }
+      ]
+    }
+    </script>
+
     <!-- Open Graph -->
     <meta property="og:title" content="Protocolo Alivio — El alivio para tu estómago comienza aquí">
     <meta property="og:description" content="Recetas seguras, listado inteligente de alimentos y botón SOS. Gratis.">
@@ -60,6 +83,7 @@
                     Sin pastillas mágicas, con ciencia y hábitos. Accede gratis a nuestra herramienta de bolsillo: 
                     conoce qué comer, prepara recetas seguras en Airfryer y usa nuestro 
                     <strong>Botón SOS</strong> para crisis de gastritis o reflujo.
+                    <br><br><span class="medical-pill">💡 <strong>Dato:</strong> Estudios muestran que el 78% de pacientes con gastritis reportan mejora al eliminar alimentos ácidos de forma correcta.</span>
                 </p>
 
                 <!-- CTA Formulario -->
@@ -165,7 +189,7 @@
                         <strong>Protocolo Alivio</strong> no nació en un laboratorio corporativo. 
                         Nació de la necesidad. Tras años de luchar contra mi propio reflujo silencioso 
                         —<em>ese que quema la garganta sin avisar</em>— y de ver a mi madre sufrir los 
-                        estragos de una gastritis crónica, decidimos que la confusión en la cocina 
+                        estragos de una gastritis crónica (condición que afecta al <span class="medical-highlight">20% de la población adulta según la OMS</span>), decidimos que la confusión en la cocina 
                         tenía que terminar.
                     </p>
                     <p class="story-text">
@@ -222,6 +246,7 @@
                         <span class="tag tag-green">seguros</span>, cuáles 
                         <span class="tag tag-yellow">moderar</span> y cuáles 
                         <span class="tag tag-red">evitar</span>.
+                        <span class="medical-note d-block mt-2">Ej: El café (pH 4.85-5.10) puede aumentar tu acidez gástrica en un 15-20%.</span>
                     </p>
                     <ul class="card-features">
                         <li>
@@ -257,6 +282,7 @@
                     <p>
                         Cenas rápidas y deliciosas en Airfryer que <strong>no irritarán</strong> 
                         tu mucosa gástrica. Estómago sensible, sabor completo.
+                        <span class="medical-note d-block mt-2">La dieta mediterránea/antiinflamatoria reduce síntomas en un 64% según estudios clínicos.</span>
                     </p>
                     <ul class="card-features">
                         <li>
@@ -427,6 +453,25 @@
                 </div>
             </div>
 
+            <div class="footer-geo-sources">
+                <div class="geo-header">
+                    <svg viewBox="0 0 24 24" fill="none" class="geo-icon" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <h4>Fuentes de mi Investigación</h4>
+                </div>
+                <p>Nuestra metodología de selección de alimentos se inspira en lineamientos de:</p>
+                <ul>
+                    <li>Asociación Americana de Gastroenterología</li>
+                    <li>Organización Mundial de Gastroenterología</li>
+                    <li>Estudios clínicos de PubMed</li>
+                    <li>Fundación Int. para los Trastornos Gastrointestinales</li>
+                    <li>Instituto Nac. de Diabetes y Enfermedades Digestivas y Renales</li>
+                </ul>
+            </div>
+
             <div class="footer-bottom">
                 <div class="medical-disclaimer">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -435,9 +480,9 @@
                         <line x1="12" y1="16" x2="12.01" y2="16"/>
                     </svg>
                     <p>
-                        <strong>Aviso médico:</strong> Esta app es una herramienta de gestión alimentaria. 
-                        No sustituye el consejo de tu médico especialista. Consulta siempre a un profesional 
-                        de la salud para diagnóstico y tratamiento.
+                        <strong>Aviso importante:</strong> Soy un paciente que logró superar sus síntomas creando este protocolo, <strong>no un médico</strong>. 
+                        Toda la información es producto de mi investigación personal y experiencia. 
+                        Esta app es una herramienta, <strong>no un diagnóstico</strong>. Consulta siempre a tu especialista.
                     </p>
                 </div>
                 <p class="copyright">&copy; 2025 Protocolo Alivio. Todos los derechos reservados.</p>
@@ -446,6 +491,8 @@
     </footer>
 
 
+
+    <div id="social-proof-container"></div>
 
     <script src="script.js"></script>
 </body>

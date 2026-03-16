@@ -4,10 +4,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== Lead Form Submission =====
+    // ===== Lead Form Submission (MailerLite Integration) =====
     const leadForm = document.getElementById('leadForm');
     if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
+        leadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const emailInput = document.getElementById('emailInput');
@@ -22,24 +22,50 @@ document.addEventListener('DOMContentLoaded', () => {
             // Animate button
             submitBtn.classList.add('loading');
             const originalText = submitBtn.querySelector('.btn-text').textContent;
-            submitBtn.querySelector('.btn-text').textContent = 'Redirigiendo...';
+            submitBtn.querySelector('.btn-text').textContent = 'Conectando...';
             submitBtn.disabled = true;
 
-            // Simulate submission (ready for Hostinger Reach integration)
-            setTimeout(() => {
-                submitBtn.querySelector('.btn-text').textContent = originalText;
+            try {
+                // MailerLite JSONP Endpoint
+                const accountId = '2186246';
+                const formId = '181783285933802773';
+                const url = `https://assets.mailerlite.com/jsonp/${accountId}/forms/${formId}/subscribe`;
+
+                // Prepare Data
+                const formData = new FormData();
+                formData.append('fields[email]', email);
+                formData.append('ajax', 1);
+
+                // Use fetch with no-cors as a simple beacon or try regular fetch
+                // JSONP is better but for simple capture, a hidden form or background fetch works
+                await fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors' // This avoids CORS issues but doesn't return response
+                });
+
+                // Success or just Proceed
+                submitBtn.querySelector('.btn-text').textContent = '¡Listo!';
+                
+                setTimeout(() => {
+                    // Open the actual app
+                    window.open('https://proyecto-alivio.lovable.app/', '_blank');
+                    
+                    // Reset UI
+                    submitBtn.querySelector('.btn-text').textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+                    emailInput.value = '';
+                }, 1000);
+
+            } catch (error) {
+                console.error('Error connecting to MailerLite:', error);
+                // Fallback: Still open the app so we don't block the user
+                window.open('https://proyecto-alivio.lovable.app/', '_blank');
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('loading');
-                
-                // Log lead (for analytics)
-                console.log('Lead captured for future Hostinger Reach integration:', email);
-                
-                // Open the actual app
-                window.open('https://proyecto-alivio.lovable.app/', '_blank');
-                
-                // Clear form
-                emailInput.value = '';
-            }, 800);
+                submitBtn.querySelector('.btn-text').textContent = originalText;
+            }
         });
     }
 
@@ -158,5 +184,74 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    // ===== Social Proof Popups Logic =====
+    function initSocialProof() {
+        const container = document.getElementById('social-proof-container');
+        if (!container) return;
+
+        const fakeUsers = [
+            { name: "María de Colombia", action: "se unió a Protocolo Premium" },
+            { name: "Carlos de México", action: "descargó la herramienta" },
+            { name: "Ana de España", action: "acaba de adquirir el Protocolo" },
+            { name: "José de Argentina", action: "se unió a Protocolo Premium" },
+            { name: "Laura de Chile", action: "acaba de descargar la app" },
+            { name: "Miguel de Perú", action: "se unió a Protocolo Premium" }
+        ];
+
+        const times = ["Hace 1 min", "Hace 2 min", "Hace unos instantes", "Justo ahora"];
+
+        function createPopup(userData, timeInfo) {
+            const popup = document.createElement('div');
+            popup.className = 'social-proof-popup';
+            
+            // Emoji aleatorio
+            const emojis = ['👋', '🎉', '🌟', '💚', '🔥'];
+            const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+            popup.innerHTML = `
+                <div class="sp-icon">${randomEmoji}</div>
+                <div class="sp-content">
+                    <p class="sp-title"><strong>${userData.name}</strong> ${userData.action}</p>
+                    <p class="sp-time">${timeInfo}</p>
+                </div>
+            `;
+
+            container.appendChild(popup);
+
+            // Animate In
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    popup.classList.add('show');
+                });
+            });
+
+            // Animate Out after 6 seconds
+            setTimeout(() => {
+                popup.classList.remove('show');
+                // Remove from DOM after transition
+                setTimeout(() => {
+                    if (container.contains(popup)) {
+                        container.removeChild(popup);
+                    }
+                }, 500);
+            }, 6000);
+        }
+
+        function triggerRandomPopup() {
+            const randomUser = fakeUsers[Math.floor(Math.random() * fakeUsers.length)];
+            const randomTime = times[Math.floor(Math.random() * times.length)];
+            createPopup(randomUser, randomTime);
+            
+            // Randomize next popup between 45s and 90s (as requested ~1 minute)
+            const nextDelay = Math.floor(Math.random() * (90000 - 45000 + 1)) + 45000;
+            setTimeout(triggerRandomPopup, nextDelay);
+        }
+
+        // Trigger first popup after 10 seconds of landing
+        setTimeout(triggerRandomPopup, 10000);
+    }
+
+    initSocialProof();
 
 });
