@@ -191,12 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container) return;
 
         const fakeUsers = [
-            { name: "María de Colombia", action: "se unió a Protocolo Premium" },
-            { name: "Carlos de México", action: "descargó la herramienta" },
-            { name: "Ana de España", action: "acaba de adquirir el Protocolo" },
-            { name: "José de Argentina", action: "se unió a Protocolo Premium" },
-            { name: "Laura de Chile", action: "acaba de descargar la app" },
-            { name: "Miguel de Perú", action: "se unió a Protocolo Premium" }
+            { name: "María de Colombia", action: "adquirió Protocolo Premium" },
+            { name: "Carlos de México", action: "adquirió Protocolo Premium" },
+            { name: "Ana de España", action: "se unió a Protocolo Premium" },
+            { name: "José de Argentina", action: "desbloqueó el Acceso Total" },
+            { name: "Laura de Chile", action: "adquirió Protocolo Premium" },
+            { name: "Miguel de Perú", action: "desbloqueó el Acceso Total" },
+            { name: "Sofía de Ecuador", action: "se unió a Protocolo Premium" },
+            { name: "Diego de USA", action: "adquirió Protocolo Premium" }
         ];
 
         const times = ["Hace 1 min", "Hace 2 min", "Hace unos instantes", "Justo ahora"];
@@ -206,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.className = 'social-proof-popup';
             
             // Emoji aleatorio
-            const emojis = ['👋', '🎉', '🌟', '💚', '🔥'];
+            const emojis = ['🎉', '🌟', '💚', '🔥'];
             const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
             popup.innerHTML = `
@@ -243,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const randomTime = times[Math.floor(Math.random() * times.length)];
             createPopup(randomUser, randomTime);
             
-            // Randomize next popup between 45s and 90s (as requested ~1 minute)
-            const nextDelay = Math.floor(Math.random() * (90000 - 45000 + 1)) + 45000;
+            // Randomize next popup between 25s and 35s (avg 30s)
+            const nextDelay = Math.floor(Math.random() * (35000 - 25000 + 1)) + 25000;
             setTimeout(triggerRandomPopup, nextDelay);
         }
 
